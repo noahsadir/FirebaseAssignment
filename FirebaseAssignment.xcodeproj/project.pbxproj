@@ -48,6 +48,7 @@
 		FF8092232AD834BB005ED6A9 = {
 			isa = PBXGroup;
 			children = (
+				FF80923D2AD834D3005ED6A9 /* README.md */,
 				FF80922E2AD834BC005ED6A9 /* FirebaseAssignment */,
 				FF80922D2AD834BC005ED6A9 /* Products */,
 			);
@@ -69,7 +70,6 @@
 				FF8092492AD849B6005ED6A9 /* ContentViewModel.swift */,
 				FF8092472AD84261005ED6A9 /* TodoFirebase.swift */,
 				FF80924B2AD85D9C005ED6A9 /* TodoItem.swift */,
-				FF80923D2AD834D3005ED6A9 /* README.md */,
 				FF80923E2AD83889005ED6A9 /* GoogleService-Info.plist */,
 				FF8092332AD834BD005ED6A9 /* Assets.xcassets */,
 				FF8092352AD834BD005ED6A9 /* Preview Content */,

@@ -2,6 +2,14 @@
 
 If you are NOT cloning this project, then go to Appendix
 
+If you need a refresher on the concepts behind this assignment,
+the following resources may be helpful:
+
+- [Swift Docs - Concurrency](https://docs.swift.org/swift-book/documentation/the-swift-programming-language/concurrency/)
+- [Swift Docs - Tasks](https://developer.apple.com/documentation/swift/task)
+- [Hacking With Swift - DispatchQueue](https://www.hackingwithswift.com/read/9/4/back-to-the-main-thread-dispatchqueuemain)
+- [Firebase - Add/Get Firestore data](https://firebase.google.com/docs/firestore/query-data/get-data#swift)
+
 ## Instructions
 
 ### Step 0: View existing implementation
@@ -15,14 +23,47 @@ In this assignment, you'll use Firebase to put your todo items in the cloud!
 
 ### Step 1: Connect view model to TodoFirebase
 
-To separate view logic from backend stuff, we have a separate `TodoFirebase`
-class which ContentViewModel should call.
+To separate local app logic from network calls, we have a separate
+`TodoFirebase` class which `ContentViewModel` should call.
+
+Implement the following two methods in ContentViewModel:
+- `loadItems`
+- `addItem`
 
 ### Step 2: Get items from database
 
-### Step 3: Add items from database
+Now that the view model is connected to our backend helper, it's time to
+actually implement the Firebase calls.
 
-## Appendix
+Implement the following method in TodoFirebase:
+- `getItems`
+
+Once you think you have a working solution, try running the app.
+
+If your solution works, clicking the "Refresh" button should display
+a couple items in the "Items in Firebase" section of the list.
+
+### Step 3: Add items to database
+
+_Important!_ If you're using the existing Firebase instance we provided,
+please don't add items to the existing `todoItems` collection. Ask an
+officer for a collection name that you can use.
+
+Now that we can fetch items from the database, we need a way to add
+new ones.
+
+Implement the following method in TodoFirebase:
+- `addItem`
+
+If your solution works, you should still be able to add items to the
+local list. But now if you click "Refresh", you'll notice that it
+also shows up in your Firebase list!
+
+### Next Steps
+
+That's all! You've successfully made a cloud-based todo list app!
+
+## Appendix: Creating project from scratch
 
 Follow these steps if you want to do this assignment from scratch.
 
@@ -78,7 +119,8 @@ Let's work on setting up the Firestore database.
 Now you've created a Firestore database with a collection named "todoItems"
 All we need to do now is add the assignment boilerplate to your Xcode project
 
-Add the following files to your project
+Add the following files from the repo into your project:
+
 - `ContentView` (replace your existing ContentView)
 - `ContentViewModel`
 - `TodoFirebase`
