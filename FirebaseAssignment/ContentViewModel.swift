@@ -24,6 +24,13 @@ class ContentViewModel: ObservableObject {
     func loadItems(whenCompleted: @escaping (_ success: Bool) -> Void) {
         print("** Not implemented yet ** ContentViewModel.loadItems")
         // YOUR CODE HERE
+        Task {
+            guard let unwrapped = await TodoFirebase.getItems() else {
+                whenCompleted(false)
+                return
+            }
+            firebaseTodoItems = unwrapped
+        }
     }
     
     // STEP 1.2: Make a call to Firebase to add items
@@ -32,6 +39,7 @@ class ContentViewModel: ObservableObject {
     func addItem(title: String, description: String) {
         print("** Not implemented yet ** ContentViewModel.addItem")
         // YOUR CODE HERE
+        TodoFirebase.addItem(item: TodoItem(title: title, description: description))
     }
     
 }

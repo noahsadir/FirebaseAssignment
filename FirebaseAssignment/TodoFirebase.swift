@@ -12,7 +12,7 @@ import FirebaseFirestore
 // This is collection in the DB which contains todo items!
 // Once you get to implementing addItem, make sure to change this
 // to your designated collection if using our Firebase instance.
-let collection: String = "todoItems"
+let collection: String = "todoItemsA"
 
 class TodoFirebase {
     
@@ -31,7 +31,20 @@ class TodoFirebase {
     static func getItems() async -> [TodoItem]? {
         print("** Not implemented yet ** TodoFirebase.getItems")
         // YOUR CODE HERE
-        return []
+        var arr: [TodoItem] = []
+        let db = Firestore.firestore()
+        
+        let table = db.collection(collection)
+        do {
+            let snapshot  = try await table.getDocuments()
+            for doc in snapshot.documents {
+                arr.append(TodoItem(id: doc.documentID, dict: doc.data()))
+            }
+        } catch {
+            return nil
+        }
+        
+        return arr
     }
     
     // STEP 3: Add an item to firebase
@@ -44,5 +57,8 @@ class TodoFirebase {
     static func addItem(item: TodoItem) {
         print("** Not implemented yet ** TodoFirebase.addItem")
         // YOUR CODE HERE
+        let db = Firestore.firestore()
+        let table = db.collection(collection)
+        table.addDocument(data: item.encodeWithoutID())
     }
 }
