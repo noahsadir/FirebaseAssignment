@@ -9,11 +9,14 @@ import Foundation
 import FirebaseCore
 import FirebaseFirestore
 
-let collection: String = "todoItems" // this is collection in the DB which contains todo items!
+// This is collection in the DB which contains todo items!
+// Once you get to implementing addItem, make sure to change this
+// to your designated collection if using our Firebase instance.
+let collection: String = "todoItems"
 
 class TodoFirebase {
     
-    // Fetch todo list items from Firebase
+    // STEP 2: Fetch todo list items from Firebase
     // TODO:
     // - Create an empty TodoItem array
     // - Get the collection reference which points to the
@@ -31,7 +34,7 @@ class TodoFirebase {
         return []
     }
     
-    // Add an item to firebase
+    // STEP 3: Add an item to firebase
     // TODO:
     // - Get the collection reference which points to the
     //   collection name specified at the top of this file

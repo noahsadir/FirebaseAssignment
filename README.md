@@ -1,6 +1,7 @@
 # iOS Club - Firebase Assignment
 
-If you are NOT cloning this project, then go to Appendix
+If you are writing this project from scratch (i.e. not cloning it),
+then go to Appendix.
 
 If you need a refresher on the concepts behind this assignment,
 the following resources may be helpful:
@@ -11,6 +12,17 @@ the following resources may be helpful:
 - [Firebase - Add/Get Firestore data](https://firebase.google.com/docs/firestore/query-data/get-data#swift)
 
 ## Instructions
+
+Before starting, make sure to clone the project and push your branch.
+
+Using either CLI or Xcode, perform these steps:
+
+- Clone the project
+- Create a new branch (preferably your name)
+- Push the branch to remote/origin
+
+_Note:_ Xcode sometimes likes to crash after pushing to remote.
+Don't worry about it, just reopen it.
 
 ### Step 0: View existing implementation
 

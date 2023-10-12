@@ -20,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FF75E2122AD8876B0047F051 /* LICENSE.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
 		FF80922C2AD834BC005ED6A9 /* FirebaseAssignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FirebaseAssignment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF80922F2AD834BC005ED6A9 /* FirebaseAssignmentApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAssignmentApp.swift; sourceTree = "<group>"; };
 		FF8092312AD834BC005ED6A9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -49,6 +50,7 @@
 			isa = PBXGroup;
 			children = (
 				FF80923D2AD834D3005ED6A9 /* README.md */,
+				FF75E2122AD8876B0047F051 /* LICENSE.md */,
 				FF80922E2AD834BC005ED6A9 /* FirebaseAssignment */,
 				FF80922D2AD834BC005ED6A9 /* Products */,
 			);

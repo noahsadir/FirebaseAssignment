@@ -11,7 +11,7 @@ class ContentViewModel: ObservableObject {
     @Published var firebaseTodoItems: [TodoItem] = [] // @Published makes it globally accessible to other classes
     @Published var localTodoItems: [TodoItem] = [] // @Published makes it globally accessible to other classes
     
-    // Make a call to Firebase to load items
+    // STEP 1.1: Make a call to Firebase to load items
     // TODO: Perform a call to TodoFirebase.getItems()
     // Things to consider:
     // - Is the function below sync or async? Is TodoFirebase.getItems() sync or async?
@@ -26,7 +26,7 @@ class ContentViewModel: ObservableObject {
         // YOUR CODE HERE
     }
     
-    // Make a call to Firebase to add items
+    // STEP 1.2: Make a call to Firebase to add items
     // TODO: Perform a call to TodoFirebase.addItem(...)
     // HINT: You can probably do this in one line :)
     func addItem(title: String, description: String) {
