@@ -27,30 +27,8 @@ class TodoFirebase {
     // - Return the TodoItem list
     static func getItems() async -> [TodoItem]? {
         print("** Not implemented yet ** TodoFirebase.getItems")
-        // ** SOLUTION BELOW ***
-        
-        var todoItemList: [TodoItem] = []
-        
-        // Point Firebase to the collection within our DB
-        let db: Firestore = Firestore.firestore()
-        let collection: CollectionReference = db.collection(collection)
-        
-        // Attempt to perform a query
-        var query: QuerySnapshot?
-        do {
-            query = try await collection.getDocuments();
-        } catch {
-            return nil
-        }
-        
-        // Query presumed to be success; load items
-        for document in query?.documents ?? [] {
-            let item: TodoItem = TodoItem(id: document.documentID, dict: document.data())
-            todoItemList.append(item)
-            print(item)
-        }
-        
-        return todoItemList
+        // YOUR CODE HERE
+        return []
     }
     
     // Add an item to firebase
@@ -62,11 +40,6 @@ class TodoFirebase {
     //   HINT: Look at the TodoItem file
     static func addItem(item: TodoItem) {
         print("** Not implemented yet ** TodoFirebase.addItem")
-        // ** SOLUTION BELOW ***
-        
-        let db: Firestore = Firestore.firestore()
-        let collection: CollectionReference = db.collection(collection)
-        
-        collection.document().setData(item.encodeWithoutID())
+        // YOUR CODE HERE
     }
 }

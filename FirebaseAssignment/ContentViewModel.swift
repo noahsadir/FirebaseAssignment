@@ -23,17 +23,7 @@ class ContentViewModel: ObservableObject {
     // - How do we notify the UI that the async call is complete?
     func loadItems(whenCompleted: @escaping (_ success: Bool) -> Void) {
         print("** Not implemented yet ** ContentViewModel.loadItems")
-        // ** SOLUTION BELOW **
-        Task {
-            if let items = await TodoFirebase.getItems() {
-                DispatchQueue.main.async {
-                    self.firebaseTodoItems = items
-                }
-                whenCompleted(true)
-            } else {
-                whenCompleted(false)
-            }
-        }
+        // YOUR CODE HERE
     }
     
     // Make a call to Firebase to add items
@@ -41,8 +31,7 @@ class ContentViewModel: ObservableObject {
     // HINT: You can probably do this in one line :)
     func addItem(title: String, description: String) {
         print("** Not implemented yet ** ContentViewModel.addItem")
-        // ** SOLUTION BELOW **
-        TodoFirebase.addItem(item: TodoItem(id: "", title: title, description: description))
+        // YOUR CODE HERE
     }
     
 }

@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+// DO NOT EDIT THIS
 struct ContentView: View {
     
     // This is a custom object, so use @StateObject to update UI when children values change
